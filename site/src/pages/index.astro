@@ -7,22 +7,36 @@ const posts = (await getCollection('blog'))
   .slice(0, 5);
 ---
 <Base title="DH7 — Damien Hampton">
-  <section class="intro">
-    <p>Software engineering, leadership, and the changing shape of development work.</p>
-    <p>I also build custom integrations for businesses using tools like <a href="/integrations/current-rms">Current RMS</a>, <a href="/integrations/pipedrive">Pipedrive</a>, and <a href="/integrations/maxoptra">Maxoptra</a>.</p>
+
+  <section class="mb-16">
+    <p class="text-xl leading-relaxed text-[#1C1C1A] max-w-lg">
+      Software engineering, leadership, and the changing shape of development work.
+    </p>
+    <p class="mt-4 text-[#71717A] leading-relaxed">
+      I also build custom integrations for businesses using tools like
+      <a href="/integrations/current-rms" class="text-[#1E3A5F] hover:underline">Current RMS</a>,
+      <a href="/integrations/pipedrive" class="text-[#1E3A5F] hover:underline">Pipedrive</a>, and
+      <a href="/integrations/maxoptra" class="text-[#1E3A5F] hover:underline">Maxoptra</a>.
+    </p>
   </section>
-  <section class="recent">
-    <h2>Recent writing</h2>
-    <ul>
+
+  <section>
+    <h2 class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#71717A] mb-6">Recent writing</h2>
+    <ul class="divide-y divide-[#E4E4E0]">
       {posts.map(post => (
-        <li>
-          <a href={`/blog/${post.id}`}>{post.data.title}</a>
-          <time datetime={post.data.publishedAt.toISOString()}>
-            {post.data.publishedAt.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}
+        <li class="py-4 flex items-baseline justify-between gap-4">
+          <a href={`/blog/${post.id}`} class="font-[family-name:var(--font-sans)] font-400 text-[#1C1C1A] hover:text-[#1E3A5F] transition-colors no-underline">
+            {post.data.title}
+          </a>
+          <time datetime={post.data.publishedAt.toISOString()} class="font-[family-name:var(--font-sans)] text-sm text-[#71717A] whitespace-nowrap shrink-0">
+            {post.data.publishedAt.toLocaleDateString('en-GB', { year: 'numeric', month: 'short' })}
           </time>
         </li>
       ))}
     </ul>
-    <a href="/blog">All posts</a>
+    <div class="mt-8">
+      <a href="/blog" class="font-[family-name:var(--font-sans)] text-sm text-[#1E3A5F] hover:underline">All posts →</a>
+    </div>
   </section>
+
 </Base>

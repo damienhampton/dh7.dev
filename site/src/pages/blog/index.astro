@@ -6,15 +6,20 @@ const posts = (await getCollection('blog'))
   .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
 ---
 <Base title="Writing — DH7">
-  <h1>Writing</h1>
-  <ul>
+
+  <h1 class="font-[family-name:var(--font-sans)] text-3xl font-600 tracking-tight text-[#1C1C1A] mb-12">Writing</h1>
+
+  <ul class="divide-y divide-[#E4E4E0]">
     {posts.map(post => (
-      <li>
-        <a href={`/blog/${post.id}`}>{post.data.title}</a>
-        <time datetime={post.data.publishedAt.toISOString()}>
-          {post.data.publishedAt.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}
+      <li class="py-4 flex items-baseline justify-between gap-4">
+        <a href={`/blog/${post.id}`} class="font-[family-name:var(--font-sans)] font-400 text-[#1C1C1A] hover:text-[#1E3A5F] transition-colors no-underline">
+          {post.data.title}
+        </a>
+        <time datetime={post.data.publishedAt.toISOString()} class="font-[family-name:var(--font-sans)] text-sm text-[#71717A] whitespace-nowrap shrink-0">
+          {post.data.publishedAt.toLocaleDateString('en-GB', { year: 'numeric', month: 'short' })}
         </time>
       </li>
     ))}
   </ul>
+
 </Base>

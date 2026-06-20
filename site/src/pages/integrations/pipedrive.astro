@@ -2,29 +2,50 @@
 import Base from '../../layouts/Base.astro';
 ---
 <Base title="Pipedrive Integrations — DH7" description="Custom integrations for Pipedrive. Keep your CRM in sync with the rest of your business in real time.">
-  <h1>Pipedrive Integrations</h1>
 
-  <p>Pipedrive is a strong sales CRM. But sales data doesn't live in isolation — it needs to connect to the tools your operations, finance, and logistics teams rely on.</p>
+  <div class="max-w-lg">
+    <p class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#71717A] mb-4">
+      <a href="/integrations" class="hover:text-[#1C1C1A] transition-colors no-underline">Integrations</a> / Pipedrive
+    </p>
+    <h1 class="font-[family-name:var(--font-sans)] text-3xl font-600 tracking-tight text-[#1C1C1A] mb-6">Pipedrive Integrations</h1>
+    <p class="text-lg leading-relaxed text-[#1C1C1A]">
+      Pipedrive is a strong sales CRM. But sales data doesn't live in isolation — it needs to connect to the tools your operations, finance, and logistics teams rely on.
+    </p>
+    <p class="mt-4 leading-relaxed">We build integrations that keep Pipedrive in sync with the rest of your business.</p>
+  </div>
 
-  <p>We build integrations that keep Pipedrive in sync with the rest of your business.</p>
+  <div class="mt-16 space-y-12">
 
-  <h2>Deals and pipeline</h2>
+    {[
+      {
+        title: 'Deals and pipeline',
+        body: "When a deal moves in Pipedrive, other systems should know. We can sync deal stage changes to your operations platform, trigger fulfilment workflows, or update a shared status board — without anyone manually bridging the gap.",
+      },
+      {
+        title: 'Contacts and organisations',
+        body: "Contacts created in Pipedrive can flow to your other systems automatically. Changes made elsewhere — a new billing contact, an updated address — can flow back in. No duplicate entry, no stale data.",
+      },
+      {
+        title: 'Activities and follow-ups',
+        body: "We can route Pipedrive activities and notes to communication tools like Slack or Teams, so the right people are informed at the right time without needing to log into the CRM.",
+      },
+      {
+        title: 'Real-time',
+        body: "Pipedrive's webhook API means integrations don't need to poll. Changes are pushed as they happen, so downstream systems are updated in seconds.",
+      },
+    ].map(({ title, body }) => (
+      <div class="border-t border-[#E4E4E0] pt-10">
+        <h2 class="font-[family-name:var(--font-sans)] font-600 text-lg text-[#1C1C1A] mb-3">{title}</h2>
+        <p class="leading-relaxed text-[#1C1C1A]">{body}</p>
+      </div>
+    ))}
 
-  <p>When a deal moves in Pipedrive, other systems should know. We can sync deal stage changes to your operations platform, trigger fulfilment workflows, or update a shared status board — without anyone manually bridging the gap.</p>
+    <div class="border-t border-[#E4E4E0] pt-10">
+      <h2 class="font-[family-name:var(--font-sans)] font-600 text-lg text-[#1C1C1A] mb-3">Get in touch</h2>
+      <p class="leading-relaxed text-[#1C1C1A]">Tell us what you're trying to connect. We'll tell you what's possible.</p>
+      <a href="mailto:damien@26brains.com" class="font-[family-name:var(--font-sans)] inline-block mt-4 text-[#1E3A5F] hover:underline no-underline">damien@26brains.com →</a>
+    </div>
 
-  <h2>Contacts and organisations</h2>
+  </div>
 
-  <p>Contacts created in Pipedrive can flow to your other systems automatically. Changes made elsewhere — a new billing contact, an updated address — can flow back in. No duplicate entry, no stale data.</p>
-
-  <h2>Activities and follow-ups</h2>
-
-  <p>We can route Pipedrive activities and notes to communication tools like Slack or Teams, so the right people are informed at the right time without needing to log into the CRM.</p>
-
-  <h2>Real-time</h2>
-
-  <p>Pipedrive's webhook API means integrations don't need to poll. Changes are pushed as they happen, so downstream systems are updated in seconds.</p>
-
-  <h2>Get in touch</h2>
-  <p>Tell us what you're trying to connect. We'll tell you what's possible.</p>
-  <p><a href="mailto:damien@26brains.com">damien@26brains.com</a></p>
 </Base>

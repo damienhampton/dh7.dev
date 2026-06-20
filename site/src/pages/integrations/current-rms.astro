@@ -2,29 +2,50 @@
 import Base from '../../layouts/Base.astro';
 ---
 <Base title="Current RMS Integrations — DH7" description="Custom integrations for Current RMS. Connect your rental management system to accounting, CRM, and communication tools in real time.">
-  <h1>Current RMS Integrations</h1>
 
-  <p>Current RMS handles a lot. But it doesn't handle everything — and what sits outside it, your accounting package, your CRM, your communication tools, still needs to stay in sync.</p>
+  <div class="max-w-lg">
+    <p class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#71717A] mb-4">
+      <a href="/integrations" class="hover:text-[#1C1C1A] transition-colors no-underline">Integrations</a> / Current RMS
+    </p>
+    <h1 class="font-[family-name:var(--font-sans)] text-3xl font-600 tracking-tight text-[#1C1C1A] mb-6">Current RMS Integrations</h1>
+    <p class="text-lg leading-relaxed text-[#1C1C1A]">
+      Current RMS handles a lot. But it doesn't handle everything — and what sits outside it, your accounting package, your CRM, your communication tools, still needs to stay in sync.
+    </p>
+    <p class="mt-4 leading-relaxed">We build integrations that connect Current RMS to the rest of your stack.</p>
+  </div>
 
-  <p>We build integrations that connect Current RMS to the rest of your stack.</p>
+  <div class="mt-16 space-y-12">
 
-  <h2>Opportunities</h2>
+    {[
+      {
+        title: 'Opportunities',
+        body: "When a new opportunity lands in Current RMS, your wider team needs to know. We can push new and updated opportunities to your CRM, trigger notifications in Slack or Teams, or feed a shared pipeline view — so nothing falls through the gap between systems.",
+      },
+      {
+        title: 'Invoices',
+        body: "Chasing invoice status across two systems is wasted time. We sync invoices between Current RMS and your accounting package — Xero, QuickBooks, or others — so payment status is current in both places without anyone touching it.",
+      },
+      {
+        title: 'Contacts',
+        body: "Contacts created or updated in Current RMS can flow to your CRM automatically. Contacts acquired elsewhere can flow back in. One source of truth, maintained without manual effort.",
+      },
+      {
+        title: 'Real-time',
+        body: "Batch syncs introduce lag. A contact updated at 9am might not appear elsewhere until noon. We build event-driven integrations using Current RMS webhooks, so changes propagate in seconds, not hours. Your data is current because it has to be.",
+      },
+    ].map(({ title, body }) => (
+      <div class="border-t border-[#E4E4E0] pt-10">
+        <h2 class="font-[family-name:var(--font-sans)] font-600 text-lg text-[#1C1C1A] mb-3">{title}</h2>
+        <p class="leading-relaxed text-[#1C1C1A]">{body}</p>
+      </div>
+    ))}
 
-  <p>When a new opportunity lands in Current RMS, your wider team needs to know. We can push new and updated opportunities to your CRM, trigger notifications in Slack or Teams, or feed a shared pipeline view — so nothing falls through the gap between systems.</p>
+    <div class="border-t border-[#E4E4E0] pt-10">
+      <h2 class="font-[family-name:var(--font-sans)] font-600 text-lg text-[#1C1C1A] mb-3">Get in touch</h2>
+      <p class="leading-relaxed text-[#1C1C1A]">Tell us your current stack and where the friction is. We'll scope what's possible and build it.</p>
+      <a href="mailto:damien@26brains.com" class="font-[family-name:var(--font-sans)] inline-block mt-4 text-[#1E3A5F] hover:underline no-underline">damien@26brains.com →</a>
+    </div>
 
-  <h2>Invoices</h2>
+  </div>
 
-  <p>Chasing invoice status across two systems is wasted time. We sync invoices between Current RMS and your accounting package — Xero, QuickBooks, or others — so payment status is current in both places without anyone touching it.</p>
-
-  <h2>Contacts</h2>
-
-  <p>Contacts created or updated in Current RMS can flow to your CRM automatically. Contacts acquired elsewhere can flow back in. One source of truth, maintained without manual effort.</p>
-
-  <h2>Real-time</h2>
-
-  <p>Batch syncs introduce lag. A contact updated at 9am might not appear elsewhere until noon. We build event-driven integrations using Current RMS webhooks, so changes propagate in seconds, not hours. Your data is current because it has to be.</p>
-
-  <h2>Get in touch</h2>
-  <p>Tell us your current stack and where the friction is. We'll scope what's possible and build it.</p>
-  <p><a href="mailto:damien@26brains.com">damien@26brains.com</a></p>
 </Base>

@@ -2,34 +2,58 @@
 import Base from '../../layouts/Base.astro';
 ---
 <Base title="Custom Integrations — DH7" description="Custom software integrations for small businesses. Connect your systems so data flows where it needs to, automatically.">
-  <h1>Custom Integrations</h1>
 
-  <p>Most small businesses run on a handful of software tools that don't talk to each other. Data lives in separate places. People move it between systems by hand. Things get missed. Things get wrong.</p>
+  <div class="max-w-lg">
+    <p class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#71717A] mb-4">Services</p>
+    <h1 class="font-[family-name:var(--font-sans)] text-3xl font-600 tracking-tight text-[#1C1C1A] mb-6">Custom Integrations</h1>
+    <p class="text-lg leading-relaxed text-[#1C1C1A]">
+      Most small businesses run on a handful of software tools that don't talk to each other. Data lives in separate places. People move it between systems by hand. Things get missed. Things get wrong.
+    </p>
+    <p class="mt-4 leading-relaxed">
+      Custom integrations fix that. We connect your systems so data flows where it needs to, automatically.
+    </p>
+  </div>
 
-  <p>Custom integrations fix that. We connect your systems so data flows where it needs to, automatically.</p>
+  <div class="mt-16 space-y-12">
 
-  <h2>What we build</h2>
+    <div class="border-t border-[#E4E4E0] pt-10">
+      <h2 class="font-[family-name:var(--font-sans)] font-600 text-lg text-[#1C1C1A] mb-3">What we build</h2>
+      <p class="leading-relaxed text-[#1C1C1A]">Point-to-point integrations between the tools you already use — CRMs, accounting packages, booking systems, inventory tools, communication platforms. Whatever the combination, we can connect them.</p>
+    </div>
 
-  <p>Point-to-point integrations between the tools you already use — CRMs, accounting packages, booking systems, inventory tools, communication platforms. Whatever the combination, we can connect them.</p>
+    <div class="border-t border-[#E4E4E0] pt-10">
+      <h2 class="font-[family-name:var(--font-sans)] font-600 text-lg text-[#1C1C1A] mb-3">Why custom?</h2>
+      <p class="leading-relaxed text-[#1C1C1A]">Off-the-shelf integration tools handle simple cases. For anything more specific — your data model, your workflow, your edge cases — you need something built to fit.</p>
+      <p class="mt-3 leading-relaxed text-[#1C1C1A]">Custom integrations are built around your actual workflow, not a generic template. You own the code, not a SaaS subscription. There's no third-party middleware that can go down or change its pricing.</p>
+    </div>
 
-  <h2>Why custom?</h2>
+    <div class="border-t border-[#E4E4E0] pt-10">
+      <h2 class="font-[family-name:var(--font-sans)] font-600 text-lg text-[#1C1C1A] mb-3">Who this is for</h2>
+      <p class="leading-relaxed text-[#1C1C1A]">Small businesses that have outgrown manual processes. If you're copying and pasting data between systems, re-entering information, or spending time on reconciliation — that's time and money you don't need to spend.</p>
+    </div>
 
-  <p>Off-the-shelf integration tools handle simple cases. For anything more specific — your data model, your workflow, your edge cases — you need something built to fit.</p>
+    <div class="border-t border-[#E4E4E0] pt-10">
+      <h2 class="font-[family-name:var(--font-sans)] font-600 text-lg text-[#1C1C1A] mb-4">Systems we work with</h2>
+      <ul class="space-y-2">
+        {[
+          { href: '/integrations/current-rms', label: 'Current RMS', desc: 'Rental and events management' },
+          { href: '/integrations/pipedrive', label: 'Pipedrive', desc: 'CRM and sales pipeline' },
+          { href: '/integrations/maxoptra', label: 'Maxoptra', desc: 'Route planning and delivery' },
+        ].map(({ href, label, desc }) => (
+          <li class="flex items-baseline gap-3">
+            <a href={href} class="font-[family-name:var(--font-sans)] font-500 text-[#1E3A5F] hover:underline no-underline">{label}</a>
+            <span class="font-[family-name:var(--font-sans)] text-sm text-[#71717A]">{desc}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
 
-  <p>Custom integrations are built around your actual workflow, not a generic template. You own the code, not a SaaS subscription. There's no third-party middleware that can go down or change its pricing.</p>
+    <div class="border-t border-[#E4E4E0] pt-10">
+      <h2 class="font-[family-name:var(--font-sans)] font-600 text-lg text-[#1C1C1A] mb-3">Get in touch</h2>
+      <p class="leading-relaxed text-[#1C1C1A]">Tell us what systems you're running and where the friction is. We'll tell you what's possible.</p>
+      <a href="mailto:damien@26brains.com" class="font-[family-name:var(--font-sans)] inline-block mt-4 text-[#1E3A5F] hover:underline no-underline">damien@26brains.com →</a>
+    </div>
 
-  <h2>Who this is for</h2>
+  </div>
 
-  <p>Small businesses that have outgrown manual processes. If you're copying and pasting data between systems, re-entering information, or spending time on reconciliation — that's time and money you don't need to spend.</p>
-
-  <h2>Systems we work with</h2>
-  <ul>
-    <li><a href="/integrations/current-rms">Current RMS</a></li>
-    <li><a href="/integrations/pipedrive">Pipedrive</a></li>
-    <li><a href="/integrations/maxoptra">Maxoptra</a></li>
-  </ul>
-
-  <h2>Get in touch</h2>
-  <p>Tell us what systems you're running and where the friction is. We'll tell you what's possible.</p>
-  <p><a href="mailto:damien@26brains.com">damien@26brains.com</a></p>
 </Base>

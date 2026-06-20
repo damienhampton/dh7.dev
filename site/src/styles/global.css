@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: 'Space Grotesk', system-ui, sans-serif;
+  --font-serif: 'Lora', Georgia, serif;
+
+  --color-ink:    #1C1C1A;
+  --color-paper:  #FAFAF9;
+  --color-navy:   #1E3A5F;
+  --color-muted:  #71717A;
+  --color-rule:   #E4E4E0;
+  --color-nav:    #111110;
+}
+
+html {
+  background-color: #FAFAF9;
+  color: #1C1C1A;
+}
+
+body {
+  font-family: var(--font-serif);
+}
+
+/* Override prose to use our typefaces */
+.prose :where(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: #1C1C1A;
+}
+
+.prose :where(code):not(:where(pre *)) {
+  font-size: 0.875em;
+  background: #F0F0EE;
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+  font-weight: 400;
+}
+
+.prose :where(code):not(:where(pre *))::before,
+.prose :where(code):not(:where(pre *))::after {
+  content: none;
+}

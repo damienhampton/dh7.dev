@@ -2,29 +2,50 @@
 import Base from '../../layouts/Base.astro';
 ---
 <Base title="Maxoptra Integrations — DH7" description="Custom integrations for Maxoptra. Connect your route planning and delivery management to the rest of your operations.">
-  <h1>Maxoptra Integrations</h1>
 
-  <p>Maxoptra handles route planning and delivery management. But the data it needs — orders, contacts, job status — often lives somewhere else. And the data it produces — ETAs, completions, exceptions — needs to get back to those systems.</p>
+  <div class="max-w-lg">
+    <p class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#71717A] mb-4">
+      <a href="/integrations" class="hover:text-[#1C1C1A] transition-colors no-underline">Integrations</a> / Maxoptra
+    </p>
+    <h1 class="font-[family-name:var(--font-sans)] text-3xl font-600 tracking-tight text-[#1C1C1A] mb-6">Maxoptra Integrations</h1>
+    <p class="text-lg leading-relaxed text-[#1C1C1A]">
+      Maxoptra handles route planning and delivery management. But the data it needs — orders, contacts, job status — often lives somewhere else. And the data it produces — ETAs, completions, exceptions — needs to get back to those systems.
+    </p>
+    <p class="mt-4 leading-relaxed">We close that loop.</p>
+  </div>
 
-  <p>We close that loop.</p>
+  <div class="mt-16 space-y-12">
 
-  <h2>Order and job import</h2>
+    {[
+      {
+        title: 'Order and job import',
+        body: "Push orders into Maxoptra automatically from your order management system, CRM, or rental platform. No manual re-entry, no lag between order creation and route planning.",
+      },
+      {
+        title: 'Status and completion sync',
+        body: "When a delivery is completed or an exception is raised in Maxoptra, downstream systems need to know. We can sync job status back to your CRM, trigger customer notifications, or update your operations dashboard in real time.",
+      },
+      {
+        title: 'ETA and tracking data',
+        body: "Maxoptra generates real-time ETA and location data. We can surface that where it's needed — in a customer-facing portal, in a support tool, or in a shared ops view — without anyone manually checking the Maxoptra console.",
+      },
+      {
+        title: 'Real-time',
+        body: "Route and delivery data changes fast. We build event-driven integrations so your systems reflect what's happening now, not what happened an hour ago.",
+      },
+    ].map(({ title, body }) => (
+      <div class="border-t border-[#E4E4E0] pt-10">
+        <h2 class="font-[family-name:var(--font-sans)] font-600 text-lg text-[#1C1C1A] mb-3">{title}</h2>
+        <p class="leading-relaxed text-[#1C1C1A]">{body}</p>
+      </div>
+    ))}
 
-  <p>Push orders into Maxoptra automatically from your order management system, CRM, or rental platform. No manual re-entry, no lag between order creation and route planning.</p>
+    <div class="border-t border-[#E4E4E0] pt-10">
+      <h2 class="font-[family-name:var(--font-sans)] font-600 text-lg text-[#1C1C1A] mb-3">Get in touch</h2>
+      <p class="leading-relaxed text-[#1C1C1A]">Tell us what systems you're running and where the friction is. We'll scope the work and build it.</p>
+      <a href="mailto:damien@26brains.com" class="font-[family-name:var(--font-sans)] inline-block mt-4 text-[#1E3A5F] hover:underline no-underline">damien@26brains.com →</a>
+    </div>
 
-  <h2>Status and completion sync</h2>
+  </div>
 
-  <p>When a delivery is completed or an exception is raised in Maxoptra, downstream systems need to know. We can sync job status back to your CRM, trigger customer notifications, or update your operations dashboard in real time.</p>
-
-  <h2>ETA and tracking data</h2>
-
-  <p>Maxoptra generates real-time ETA and location data. We can surface that where it's needed — in a customer-facing portal, in a support tool, or in a shared ops view — without anyone manually checking the Maxoptra console.</p>
-
-  <h2>Real-time</h2>
-
-  <p>Route and delivery data changes fast. We build event-driven integrations so your systems reflect what's happening now, not what happened an hour ago.</p>
-
-  <h2>Get in touch</h2>
-  <p>Tell us what systems you're running and where the friction is. We'll scope the work and build it.</p>
-  <p><a href="mailto:damien@26brains.com">damien@26brains.com</a></p>
 </Base>

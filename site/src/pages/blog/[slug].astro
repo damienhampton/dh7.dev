@@ -11,14 +11,31 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 <Base title={`${post.data.title} — DH7`} description={post.data.brief}>
+
   <article>
-    <header>
-      <h1>{post.data.title}</h1>
-      <time datetime={post.data.publishedAt.toISOString()}>
+    <header class="mb-10">
+      <h1 class="font-[family-name:var(--font-sans)] text-3xl font-600 tracking-tight text-[#1C1C1A] leading-tight mb-3">
+        {post.data.title}
+      </h1>
+      <time datetime={post.data.publishedAt.toISOString()} class="font-[family-name:var(--font-sans)] text-sm text-[#71717A]">
         {post.data.publishedAt.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}
       </time>
     </header>
-    <Content />
+
+    <div class="prose prose-stone max-w-none
+      prose-headings:font-[family-name:var(--font-sans)]
+      prose-a:text-[#1E3A5F]
+      prose-a:no-underline
+      hover:prose-a:underline
+      prose-code:text-[#1C1C1A]
+      prose-pre:bg-[#F0F0EE]
+      prose-pre:text-[#1C1C1A]">
+      <Content />
+    </div>
   </article>
-  <a href="/blog">← All posts</a>
+
+  <div class="mt-16 pt-8 border-t border-[#E4E4E0]">
+    <a href="/blog" class="font-[family-name:var(--font-sans)] text-sm text-[#1E3A5F] hover:underline">← All posts</a>
+  </div>
+
 </Base>
