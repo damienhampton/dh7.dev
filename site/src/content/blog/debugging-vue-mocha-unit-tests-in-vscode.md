@@ -6,6 +6,8 @@ brief: "I have been struggling to be able to debug Vue Mocha unit tests in VSCod
 tags: ["mocha", "unit-tests", "development", "webpack", "vue", "vscode"]
 ---
 
+![VSCode debug pane](/images/posts/vscode-vue-mocha-debug.png)
+
 I have been struggling to be able to debug [Vue](https://vuejs.org/) [Mocha](https://mochajs.org/) unit tests in [VSCode](https://code.visualstudio.com/), but I think I might have the answer.
 
 Running a Vue application is easy enough and debugging the running application in Chrome or VSCode is relatively straightforward.

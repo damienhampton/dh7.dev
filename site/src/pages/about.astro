@@ -4,8 +4,8 @@ import Base from '../layouts/Base.astro';
 <Base title="About — Damien Hampton" description="Damien Hampton — software developer, engineering leader, and technical consultant with 25+ years of experience.">
 
   <div class="max-w-lg mb-16">
-    <h1 class="font-[family-name:var(--font-sans)] text-3xl font-600 tracking-tight text-[#1C1C1A] mb-6">About</h1>
-    <p class="text-lg leading-relaxed text-[#1C1C1A]">
+    <h1 class="font-[family-name:var(--font-sans)] text-3xl font-600 tracking-tight text-[#2A2520] mb-6">About</h1>
+    <p class="text-lg leading-relaxed text-[#2A2520]">
       I'm a software developer and engineering leader with over 25 years of experience across development, technical leadership, consultancy, and architecture.
     </p>
     <p class="mt-4 leading-relaxed">
@@ -18,23 +18,23 @@ import Base from '../layouts/Base.astro';
 
   <div class="space-y-0">
 
-    <h2 class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#71717A] mb-6">Experience</h2>
+    <h2 class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#7A7068] mb-6">Experience</h2>
 
     {[
       {
-        period: '2024 – present',
+        period: 'January 2023 – present',
         role: 'Contract Developer',
         org: 'News UK',
         desc: 'Backend development and infrastructure across various services.',
       },
       {
-        period: '2022 – 2024',
+        period: 'November 2021 – December 2022',
         role: 'Director of Engineering',
         org: 'nate',
         desc: 'Engineering leadership for consumer-facing products.',
       },
       {
-        period: '2020 – 2022',
+        period: 'April 2020 – November 2021',
         role: 'Developer',
         org: 'Joyn',
         orgUrl: 'https://www.joyn.de/',
@@ -91,28 +91,28 @@ import Base from '../layouts/Base.astro';
         desc: '',
       },
     ].map(({ period, role, org, orgUrl, desc }) => (
-      <div class="border-t border-[#E4E4E0] py-6 grid grid-cols-[140px_1fr] gap-6">
-        <div class="font-[family-name:var(--font-sans)] text-sm text-[#71717A] pt-0.5 shrink-0">{period}</div>
+      <div class="border-t border-[#E6DFD0] py-6 grid grid-cols-[140px_1fr] gap-6">
+        <div class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068] pt-0.5 shrink-0">{period}</div>
         <div>
-          <div class="font-[family-name:var(--font-sans)] font-500 text-[#1C1C1A]">{role}</div>
-          <div class="font-[family-name:var(--font-sans)] text-sm text-[#71717A] mb-2">
-            {orgUrl ? <a href={orgUrl} class="hover:text-[#1C1C1A] transition-colors no-underline">{org}</a> : org}
+          <div class="font-[family-name:var(--font-sans)] font-500 text-[#2A2520]">{role}</div>
+          <div class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068] mb-2">
+            {orgUrl ? <a href={orgUrl} class="hover:text-[#2A2520] transition-colors no-underline">{org}</a> : org}
           </div>
-          {desc && <p class="text-sm leading-relaxed text-[#1C1C1A]">{desc}</p>}
+          {desc && <p class="text-sm leading-relaxed text-[#2A2520]">{desc}</p>}
         </div>
       </div>
     ))}
 
-    <div class="border-t border-[#E4E4E0] pt-10 mt-4">
-      <h2 class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#71717A] mb-6">Education</h2>
+    <div class="border-t border-[#E6DFD0] pt-10 mt-4">
+      <h2 class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#7A7068] mb-6">Education</h2>
       <div class="space-y-3">
         <div class="grid grid-cols-[140px_1fr] gap-6">
-          <span class="font-[family-name:var(--font-sans)] text-sm text-[#71717A]">2015</span>
-          <span class="font-[family-name:var(--font-sans)] text-sm text-[#1C1C1A]">Certified Scrum Master PSM I</span>
+          <span class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068]">2015</span>
+          <span class="font-[family-name:var(--font-sans)] text-sm text-[#2A2520]">Certified Scrum Master PSM I</span>
         </div>
         <div class="grid grid-cols-[140px_1fr] gap-6">
-          <span class="font-[family-name:var(--font-sans)] text-sm text-[#71717A]">1995 – 1998</span>
-          <span class="font-[family-name:var(--font-sans)] text-sm text-[#1C1C1A]">BSc Computing, University of North London</span>
+          <span class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068]">1995 – 1998</span>
+          <span class="font-[family-name:var(--font-sans)] text-sm text-[#2A2520]">BSc Computing, University of North London</span>
         </div>
       </div>
     </div>

@@ -6,6 +6,8 @@ brief: "TL;DR You can offload CPU intensive code using Node’s worker threads m
 tags: ["javascript", "performance", "tutorials", "development", "nodejs", "cpu"]
 ---
 
+![Worker threads illustration](/images/posts/worker.png)
+
 TL;DR You can offload CPU intensive code using Node’s worker threads module. A demo app of the effect of this [can be found here](https://github.com/damienhampton/node-worker-demo).
 
 I thought I understood Node’s async mode. I’ve used callbacks, I’ve used promises and I’ve used async/await. I’ve dealt with unhandled promise rejections and I’ve worked out how to use try and catch with async tasks.
@@ -14,7 +16,7 @@ I thought I’d mastered the async model before and been rudely awakened by some
 
 How wrong I was.
 
-![3wuk5q.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1647197177619/x4XHb5bSm.jpg)
+![](/images/posts/3wuk5q.jpg)
 
 I have a simple web application that takes a lot of complex database records; processes those records; and then outputs them.
 
@@ -26,7 +28,7 @@ I thought that I could just slap a few async / awaits into my code at various po
 
 It didn’t work.
 
-![3wuf9m.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1647197197252/06TByviRY.jpg)
+![](/images/posts/3wuf9m.jpg)
 
 My understanding now is that Node can actually only do few very select types of operation asynchronously. These are operations for which Node has specifc addons – notably network operations, I/O and cryptography. Any module that ultimate uses those operations will also benefit from using async / await.
 

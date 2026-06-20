@@ -6,6 +6,8 @@ brief: "Using iTerm2 for development is awesome. You can use CTRL + a to move to
 tags: ["mac", "development", "iterm2", "tips"]
 ---
 
+![iTerm2 preferences pane](/images/posts/iterm2-preferences.png)
+
 Using iTerm2 for development is awesome. You can use CTRL + a to move to the start of the current line and CTRL + e to move to the end.
 
 With long commands, it would be convenient to just jump back a few words, edit the command and then execute it. Whilst this is possible by default in iTerms2, the keys are cumbersome.

@@ -2,20 +2,21 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --font-sans: 'Space Grotesk', system-ui, sans-serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
   --font-serif: 'Lora', Georgia, serif;
 
-  --color-ink:    #1C1C1A;
-  --color-paper:  #FAFAF9;
-  --color-navy:   #1E3A5F;
-  --color-muted:  #71717A;
-  --color-rule:   #E4E4E0;
-  --color-nav:    #111110;
+  --color-ink:    #2A2520;
+  --color-paper:  #FDFBF4;
+  --color-accent: #A87820;
+  --color-muted:  #7A7068;
+  --color-rule:   #E6DFD0;
+  --color-nav:    #FDFBF4;
 }
 
 html {
-  background-color: #FAFAF9;
-  color: #1C1C1A;
+  background-color: #FDFBF4;
+  color: #2A2520;
+  font-size: 18px;
 }
 
 body {
@@ -26,12 +27,12 @@ body {
 .prose :where(h1, h2, h3, h4, h5, h6) {
   font-family: var(--font-sans);
   font-weight: 600;
-  color: #1C1C1A;
+  color: #2A2520;
 }
 
 .prose :where(code):not(:where(pre *)) {
   font-size: 0.875em;
-  background: #F0F0EE;
+  background: #F0EDE4;
   padding: 0.15em 0.35em;
   border-radius: 3px;
   font-weight: 400;

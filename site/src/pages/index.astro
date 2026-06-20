@@ -9,33 +9,33 @@ const posts = (await getCollection('blog'))
 <Base title="DH7 — Damien Hampton">
 
   <section class="mb-16">
-    <p class="text-xl leading-relaxed text-[#1C1C1A] max-w-lg">
+    <p class="text-xl leading-relaxed text-[#2A2520] max-w-lg">
       Software engineering, leadership, and the changing shape of development work.
     </p>
-    <p class="mt-4 text-[#71717A] leading-relaxed">
+    <p class="mt-4 text-[#7A7068] leading-relaxed">
       I also build custom integrations for businesses using tools like
-      <a href="/integrations/current-rms" class="text-[#1E3A5F] hover:underline">Current RMS</a>,
-      <a href="/integrations/pipedrive" class="text-[#1E3A5F] hover:underline">Pipedrive</a>, and
-      <a href="/integrations/maxoptra" class="text-[#1E3A5F] hover:underline">Maxoptra</a>.
+      <a href="/integrations/current-rms" class="text-[#A87820] hover:underline">Current RMS</a>,
+      <a href="/integrations/pipedrive" class="text-[#A87820] hover:underline">Pipedrive</a>, and
+      <a href="/integrations/maxoptra" class="text-[#A87820] hover:underline">Maxoptra</a>.
     </p>
   </section>
 
   <section>
-    <h2 class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#71717A] mb-6">Recent writing</h2>
-    <ul class="divide-y divide-[#E4E4E0]">
+    <h2 class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#7A7068] mb-6">Recent writing</h2>
+    <ul class="divide-y divide-[#E6DFD0]">
       {posts.map(post => (
         <li class="py-4 flex items-baseline justify-between gap-4">
-          <a href={`/blog/${post.id}`} class="font-[family-name:var(--font-sans)] font-400 text-[#1C1C1A] hover:text-[#1E3A5F] transition-colors no-underline">
+          <a href={`/blog/${post.id}`} class="font-[family-name:var(--font-sans)] font-400 text-[#2A2520] hover:text-[#A87820] transition-colors no-underline">
             {post.data.title}
           </a>
-          <time datetime={post.data.publishedAt.toISOString()} class="font-[family-name:var(--font-sans)] text-sm text-[#71717A] whitespace-nowrap shrink-0">
+          <time datetime={post.data.publishedAt.toISOString()} class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068] whitespace-nowrap shrink-0">
             {post.data.publishedAt.toLocaleDateString('en-GB', { year: 'numeric', month: 'short' })}
           </time>
         </li>
       ))}
     </ul>
     <div class="mt-8">
-      <a href="/blog" class="font-[family-name:var(--font-sans)] text-sm text-[#1E3A5F] hover:underline">All posts →</a>
+      <a href="/blog" class="font-[family-name:var(--font-sans)] text-sm text-[#A87820] hover:underline">All posts →</a>
     </div>
   </section>
 

@@ -6,9 +6,9 @@ brief: "Having played around with CSS Grid for a while, I had been very impresse
 tags: ["tutorial", "css", "html", "development", "css-grid"]
 ---
 
-Having played around with CSS Grid for a while, I had been very impressed with it. But having [watched this excellent video on the use of grid areas](https://www.youtube.com/watch?v=7kVeCqQCxlk), I realise that I have been holding the hammer by the head.
+![CSS Grid example](/images/posts/css-grid-example.png)
 
-%[https://youtu.be/7kVeCqQCxlk]
+Having played around with CSS Grid for a while, I had been very impressed with it. But having [watched this excellent video on the use of grid areas](https://www.youtube.com/watch?v=7kVeCqQCxlk), I realise that I have been holding the hammer by the head.
 
 Despite reading about grid areas, it hadn’t sunk in just how easily they can be used to solve basic layout requirements – especially when handling responsive layouts.
 

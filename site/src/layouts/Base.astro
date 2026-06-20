@@ -16,17 +16,17 @@ const { title, description } = Astro.props;
     {description && <meta name="description" content={description} />}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
   </head>
   <body class="min-h-screen flex flex-col">
 
-    <header class="bg-[#111110]">
-      <nav class="max-w-3xl mx-auto px-6 py-4 flex items-center gap-8">
-        <a href="/" class="font-[family-name:var(--font-sans)] font-600 text-[#FAFAF9] text-lg tracking-tight no-underline mr-auto hover:text-white transition-colors">DH7</a>
-        <a href="/about" class="font-[family-name:var(--font-sans)] text-sm font-400 text-[#A1A1A0] hover:text-[#FAFAF9] transition-colors no-underline">About</a>
-        <a href="/blog" class="font-[family-name:var(--font-sans)] text-sm font-400 text-[#A1A1A0] hover:text-[#FAFAF9] transition-colors no-underline">Writing</a>
-        <a href="/integrations" class="font-[family-name:var(--font-sans)] text-sm font-400 text-[#A1A1A0] hover:text-[#FAFAF9] transition-colors no-underline">Integrations</a>
-        <a href="/contact" class="font-[family-name:var(--font-sans)] text-sm font-400 text-[#A1A1A0] hover:text-[#FAFAF9] transition-colors no-underline">Contact</a>
+    <header class="bg-[#FDFBF4] border-b border-[#E6DFD0]">
+      <nav class="max-w-3xl mx-auto px-6 py-5 flex items-center gap-8">
+        <a href="/" class="font-[family-name:var(--font-sans)] font-600 text-[#A87820] text-lg tracking-tight no-underline mr-auto hover:opacity-75 transition-opacity">DH7</a>
+        <a href="/about" class="font-[family-name:var(--font-sans)] text-base font-400 text-[#2A2520] hover:text-[#A87820] transition-colors no-underline">About</a>
+        <a href="/blog" class="font-[family-name:var(--font-sans)] text-base font-400 text-[#2A2520] hover:text-[#A87820] transition-colors no-underline">Writing</a>
+        <a href="/integrations" class="font-[family-name:var(--font-sans)] text-base font-400 text-[#2A2520] hover:text-[#A87820] transition-colors no-underline">Integrations</a>
+        <a href="/contact" class="font-[family-name:var(--font-sans)] text-base font-400 text-[#2A2520] hover:text-[#A87820] transition-colors no-underline">Contact</a>
       </nav>
     </header>
 
@@ -34,13 +34,13 @@ const { title, description } = Astro.props;
       <slot />
     </main>
 
-    <footer class="border-t border-[#E4E4E0] mt-auto">
+    <footer class="border-t border-[#E6DFD0] mt-auto">
       <div class="max-w-3xl mx-auto px-6 py-8 flex items-center justify-between">
-        <span class="font-[family-name:var(--font-sans)] text-sm text-[#71717A]">Damien Hampton</span>
+        <span class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068]">Damien Hampton</span>
         <div class="flex items-center gap-6">
-          <a href="https://www.linkedin.com/in/damienhampton/" class="font-[family-name:var(--font-sans)] text-sm text-[#71717A] hover:text-[#1C1C1A] transition-colors no-underline">LinkedIn</a>
-          <a href="https://www.youtube.com/@26brains" class="font-[family-name:var(--font-sans)] text-sm text-[#71717A] hover:text-[#1C1C1A] transition-colors no-underline">YouTube</a>
-          <a href="https://github.com/damienhampton/" class="font-[family-name:var(--font-sans)] text-sm text-[#71717A] hover:text-[#1C1C1A] transition-colors no-underline">GitHub</a>
+          <a href="https://www.linkedin.com/in/damienhampton/" class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068] hover:text-[#2A2520] transition-colors no-underline">LinkedIn</a>
+          <a href="https://www.youtube.com/@26brains" class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068] hover:text-[#2A2520] transition-colors no-underline">YouTube</a>
+          <a href="https://github.com/damienhampton/" class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068] hover:text-[#2A2520] transition-colors no-underline">GitHub</a>
         </div>
       </div>
     </footer>
