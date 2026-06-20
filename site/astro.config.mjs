@@ -1,8 +1,10 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://dh7.dev',
+  integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
   },
