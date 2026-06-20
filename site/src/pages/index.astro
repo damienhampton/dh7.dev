@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
+  .slice(0, 5);
+---
+<Base title="DH7 — Damien Hampton">
+  <section class="intro">
+    <p>Software engineering, leadership, and the changing shape of development work.</p>
+    <p>I also build custom integrations for businesses using tools like <a href="/integrations/current-rms">Current RMS</a>, <a href="/integrations/pipedrive">Pipedrive</a>, and <a href="/integrations/maxoptra">Maxoptra</a>.</p>
+  </section>
+  <section class="recent">
+    <h2>Recent writing</h2>
+    <ul>
+      {posts.map(post => (
+        <li>
+          <a href={`/blog/${post.id}`}>{post.data.title}</a>
+          <time datetime={post.data.publishedAt.toISOString()}>
+            {post.data.publishedAt.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </time>
+        </li>
+      ))}
+    </ul>
+    <a href="/blog">All posts</a>
+  </section>
+</Base>
