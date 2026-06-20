@@ -1,0 +1,55 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title="Samsara Integrations — DH7" description="Custom integrations for Samsara. Connect your fleet management and telematics data to dispatch, maintenance, and operations systems in real time.">
+
+  <div class="max-w-lg">
+    <p class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#71717A] mb-4">
+      <a href="/integrations" class="hover:text-[#1C1C1A] transition-colors no-underline">Integrations</a> / Samsara
+    </p>
+    <h1 class="font-[family-name:var(--font-sans)] text-3xl font-600 tracking-tight text-[#1C1C1A] mb-6">Samsara Integrations</h1>
+    <p class="text-lg leading-relaxed text-[#1C1C1A]">
+      Samsara generates a continuous stream of data — vehicle location, driver behaviour, safety events, inspection reports, fuel usage. Most of that data is more useful somewhere else than it is sitting in Samsara.
+    </p>
+    <p class="mt-4 leading-relaxed">We build integrations that put Samsara's data where it needs to be, in real time.</p>
+  </div>
+
+  <div class="mt-16 space-y-12">
+
+    {[
+      {
+        title: 'Vehicle tracking and dispatch',
+        body: "Real-time GPS and location data from Samsara can feed into your dispatch system, a customer-facing tracking portal, or a shared operations view — so the people who need to know where a vehicle is don't have to log into Samsara to find out.",
+      },
+      {
+        title: 'Driver safety and HR',
+        body: "Safety scores, harsh event alerts, and dashcam flags can flow automatically to your HR or fleet management system. When a safety event is triggered, the right person is notified through the right channel — without anyone manually checking the Samsara console.",
+      },
+      {
+        title: 'Maintenance',
+        body: "Driver inspection reports and fault alerts from Samsara can automatically create work orders in your maintenance system and sync repair status back. Vehicles that need attention don't fall through the gap between telematics and the workshop.",
+      },
+      {
+        title: 'Compliance',
+        body: "Hours of service and tachograph data can be pushed to your compliance or payroll systems as it's recorded. Regulatory data where it needs to be, without manual exports.",
+      },
+      {
+        title: 'Real-time',
+        body: "Samsara's webhook API pushes events the moment they happen — a route change, a form submission, a safety alert, a fuel anomaly. No polling. Your connected systems are updated in seconds, not on a schedule.",
+      },
+    ].map(({ title, body }) => (
+      <div class="border-t border-[#E4E4E0] pt-10">
+        <h2 class="font-[family-name:var(--font-sans)] font-600 text-lg text-[#1C1C1A] mb-3">{title}</h2>
+        <p class="leading-relaxed text-[#1C1C1A]">{body}</p>
+      </div>
+    ))}
+
+    <div class="border-t border-[#E4E4E0] pt-10">
+      <h2 class="font-[family-name:var(--font-sans)] font-600 text-lg text-[#1C1C1A] mb-3">Get in touch</h2>
+      <p class="leading-relaxed text-[#1C1C1A]">Tell us your current stack and where the friction is. We'll scope what's possible and build it.</p>
+      <a href="/contact" class="font-[family-name:var(--font-sans)] inline-block mt-4 text-[#1E3A5F] hover:underline no-underline">Get in touch →</a>
+    </div>
+
+  </div>
+
+</Base>
