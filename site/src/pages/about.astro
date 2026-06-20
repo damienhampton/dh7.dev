@@ -16,6 +16,25 @@ import Base from '../layouts/Base.astro';
     </p>
   </div>
 
+  <div class="mb-16">
+    <h2 class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#7A7068] mb-6">🛠️ Skills</h2>
+    <ul class="font-[family-name:var(--font-sans)] text-sm text-[#2A2520] space-y-2">
+      {[
+        'Node.js / Scala — also familiar with Java, Python, Go',
+        'Kubernetes',
+        'AWS — ECS, EKS, EC2, CloudFormation, Lambda, SNS, SQS, RDS, CloudWatch, Beanstalk, ElastiCache, DynamoDB',
+        'Terraform',
+        'CI/CD — CircleCI, GitLab, GitHub Actions',
+        'Microservices / monoliths / event-driven systems',
+        'AI-assisted development — Claude Code, GitHub Copilot, MCP',
+        'System architecture and design',
+        '3rd party API integration, including security and rate limiting',
+      ].map(skill => (
+        <li class="flex gap-2"><span class="text-[#A87820] select-none">—</span>{skill}</li>
+      ))}
+    </ul>
+  </div>
+
   <div class="space-y-0">
 
     <h2 class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#7A7068] mb-6">💼 Experience</h2>
