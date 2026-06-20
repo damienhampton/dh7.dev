@@ -66,56 +66,30 @@ import Base from '../layouts/Base.astro';
         desc: 'Stabilised the interactive department. Introduced coding standards, sandboxed development, staging environments, and version control. Clients included Sony Computer Entertainment Europe, Red Bull, and Three.',
       },
       {
-        period: '2005 – 2006',
-        role: 'Lead PHP Developer',
-        org: 'Time Out Communications',
-        orgUrl: 'https://www.timeout.com/london/',
-        desc: 'Major overhaul of the Time Out London website, including data transfer from the internal print publishing database and the public search module.',
-      },
-      {
-        period: '2002 – 2005',
-        role: 'Contract Developer',
-        org: 'Various',
-        desc: 'Clients included Saatchi & Saatchi.',
-      },
-      {
-        period: '2000 – 2002',
-        role: 'Senior Developer',
-        org: 'RD2Media',
-        desc: '',
-      },
-      {
-        period: '1998 – 2000',
+        period: '1998 – 2006',
         role: 'Developer',
-        org: 'Dennis Publishing / In Chair Viewing',
-        desc: '',
+        orgs: ['Time Out Communications', 'Saatchi & Saatchi', 'RD2 Media', 'Dennis Publishing', 'In Chair Viewing'],
       },
-    ].map(({ period, role, org, orgUrl, desc }) => (
+    ].map(({ period, role, org, orgUrl, desc, orgs }) => (
       <div class="border-t border-[#E6DFD0] py-6 grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-1 sm:gap-6">
         <div class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068] sm:pt-0.5 shrink-0">{period}</div>
         <div>
-          <div class="font-[family-name:var(--font-sans)] font-500 text-[#2A2520]">{role}</div>
-          <div class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068] mb-2">
-            {orgUrl ? <a href={orgUrl} class="hover:text-[#2A2520] transition-colors no-underline">{org}</a> : org}
-          </div>
-          {desc && <p class="text-sm leading-relaxed text-[#2A2520]">{desc}</p>}
+          <div class="font-[family-name:var(--font-sans)] font-500 text-[#2A2520] mb-1">{role}</div>
+          {orgs ? (
+            <ul class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068] space-y-0.5">
+              {orgs.map(o => <li>{o}</li>)}
+            </ul>
+          ) : (
+            <>
+              <div class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068] mb-2">
+                {orgUrl ? <a href={orgUrl} class="hover:text-[#2A2520] transition-colors no-underline">{org}</a> : org}
+              </div>
+              {desc && <p class="text-sm leading-relaxed text-[#2A2520]">{desc}</p>}
+            </>
+          )}
         </div>
       </div>
     ))}
-
-    <div class="border-t border-[#E6DFD0] pt-10 mt-4">
-      <h2 class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#7A7068] mb-6">Education</h2>
-      <div class="space-y-3">
-        <div class="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-1 sm:gap-6">
-          <span class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068]">2015</span>
-          <span class="font-[family-name:var(--font-sans)] text-sm text-[#2A2520]">Certified Scrum Master PSM I</span>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-1 sm:gap-6">
-          <span class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068]">1995 – 1998</span>
-          <span class="font-[family-name:var(--font-sans)] text-sm text-[#2A2520]">BSc Computing, University of North London</span>
-        </div>
-      </div>
-    </div>
 
   </div>
 
