@@ -2,25 +2,49 @@
 import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 
-const posts = (await getCollection('blog'))
+const allPosts = (await getCollection('blog'))
   .filter(p => !p.data.draft)
   .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
+
+const businessPosts = allPosts.filter(p => p.data.category === 'business');
+const devPosts = allPosts.filter(p => p.data.category !== 'business');
 ---
-<Base title="Writing — Damien Hampton" description="Writing on software engineering, integrations, and the changing shape of development work.">
+<Base title="Writing — Damien Hampton" description="Writing on software integrations, development, and the tools that connect businesses.">
 
   <h1 class="font-[family-name:var(--font-sans)] text-3xl font-600 tracking-tight text-[#2A2520] mb-12">📖 Writing</h1>
 
-  <ul class="divide-y divide-[#E6DFD0]">
-    {posts.map(post => (
-      <li class="py-4 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-4">
-        <a href={`/blog/${post.id}`} class="font-[family-name:var(--font-sans)] font-400 text-[#2A2520] hover:text-[#A87820] transition-colors no-underline">
-          {post.data.title}
-        </a>
-        <time datetime={post.data.publishedAt.toISOString()} class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068] sm:whitespace-nowrap sm:shrink-0">
-          {post.data.publishedAt.toLocaleDateString('en-GB', { year: 'numeric', month: 'short' })}
-        </time>
-      </li>
-    ))}
-  </ul>
+  {businessPosts.length > 0 && (
+    <section class="mb-14">
+      <h2 class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#7A7068] mb-6">📊 For business</h2>
+      <ul class="divide-y divide-[#E6DFD0]">
+        {businessPosts.map(post => (
+          <li class="py-4 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-4">
+            <a href={`/blog/${post.id}`} class="font-[family-name:var(--font-sans)] font-400 text-[#2A2520] hover:text-[#A87820] transition-colors no-underline">
+              {post.data.title}
+            </a>
+            <time datetime={post.data.publishedAt.toISOString()} class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068] sm:whitespace-nowrap sm:shrink-0">
+              {post.data.publishedAt.toLocaleDateString('en-GB', { year: 'numeric', month: 'short' })}
+            </time>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  <section>
+    <h2 class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#7A7068] mb-6">💻 Development</h2>
+    <ul class="divide-y divide-[#E6DFD0]">
+      {devPosts.map(post => (
+        <li class="py-4 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-4">
+          <a href={`/blog/${post.id}`} class="font-[family-name:var(--font-sans)] font-400 text-[#2A2520] hover:text-[#A87820] transition-colors no-underline">
+            {post.data.title}
+          </a>
+          <time datetime={post.data.publishedAt.toISOString()} class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068] sm:whitespace-nowrap sm:shrink-0">
+            {post.data.publishedAt.toLocaleDateString('en-GB', { year: 'numeric', month: 'short' })}
+          </time>
+        </li>
+      ))}
+    </ul>
+  </section>
 
 </Base>
