@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog'))
+  .filter(p => !p.data.draft)
   .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
 ---
 <Base title="Writing — Damien Hampton" description="Writing on software engineering, integrations, and the changing shape of development work.">
