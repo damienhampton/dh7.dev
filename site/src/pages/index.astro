@@ -6,17 +6,19 @@ const posts = (await getCollection('blog'))
   .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
   .slice(0, 5);
 ---
-<Base title="DH7 — Damien Hampton">
+<Base title="Damien Hampton — Software Engineer & Integration Developer">
 
   <section class="mb-16">
     <p class="text-xl leading-relaxed text-[#2A2520] max-w-lg">
-      Software engineering, leadership, and the changing shape of development work.
-    </p>
-    <p class="mt-4 text-[#7A7068] leading-relaxed">
-      I also build custom integrations for businesses using tools like
+      Hi, I'm Damien. I'm a software engineer who builds integrations between the business systems rental and logistics companies depend on —
       <a href="/integrations/current-rms" class="text-[#A87820] hover:underline">Current RMS</a>,
-      <a href="/integrations/pipedrive" class="text-[#A87820] hover:underline">Pipedrive</a>, and
-      <a href="/integrations/maxoptra" class="text-[#A87820] hover:underline">Maxoptra</a>.
+      <a href="/integrations/pipedrive" class="text-[#A87820] hover:underline">Pipedrive</a>,
+      <a href="/integrations/maxoptra" class="text-[#A87820] hover:underline">Maxoptra</a>,
+      <a href="/integrations/deputy" class="text-[#A87820] hover:underline">Deputy</a>, and others.
+    </p>
+    <p class="mt-4 text-xl leading-relaxed text-[#2A2520] max-w-lg">
+      If your team is copying data between systems, chasing updates manually, or working around gaps between tools — that's the problem I fix.
+      <a href="/contact" class="text-[#A87820] hover:underline">Get in touch</a> and tell me what's broken.
     </p>
   </section>
 
