@@ -1,0 +1,122 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="About — Damien Hampton" description="Damien Hampton — software developer, engineering leader, and technical consultant with 25+ years of experience.">
+
+  <div class="max-w-lg mb-16">
+    <h1 class="font-[family-name:var(--font-sans)] text-3xl font-600 tracking-tight text-[#1C1C1A] mb-6">About</h1>
+    <p class="text-lg leading-relaxed text-[#1C1C1A]">
+      I'm a software developer and engineering leader with over 25 years of experience across development, technical leadership, consultancy, and architecture.
+    </p>
+    <p class="mt-4 leading-relaxed">
+      I've worked as a developer, CTO, director of engineering, agile coach, and technical consultant — often several of these at once. My background spans healthcare, media, fashion, events, logistics, and consumer technology.
+    </p>
+    <p class="mt-4 leading-relaxed">
+      Currently I focus on backend development and custom integrations — connecting business systems that don't talk to each other, and building the infrastructure that keeps them in sync. I also write about software development and the changing shape of engineering work.
+    </p>
+  </div>
+
+  <div class="space-y-0">
+
+    <h2 class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#71717A] mb-6">Experience</h2>
+
+    {[
+      {
+        period: '2024 – present',
+        role: 'Contract Developer',
+        org: 'News UK',
+        desc: 'Backend development and infrastructure across various services.',
+      },
+      {
+        period: '2022 – 2024',
+        role: 'Director of Engineering',
+        org: 'nate',
+        desc: 'Engineering leadership for consumer-facing products.',
+      },
+      {
+        period: '2020 – 2022',
+        role: 'Developer',
+        org: 'Joyn',
+        orgUrl: 'https://www.joyn.de/',
+        desc: 'Managing Scala, Node.js, and Java microservices.',
+      },
+      {
+        period: '2015 – present',
+        role: 'Director',
+        org: '26 Brains',
+        desc: 'Consultancy and development practice. Projects have included technical architecture and integrations for clients across rental, fashion, healthcare, and logistics — including integrations between Current RMS, Maxoptra, Pipedrive, Cin7, Shopify, and Xero.',
+      },
+      {
+        period: '2016',
+        role: 'Chief Technology Officer',
+        org: 'Digital Life Sciences',
+        desc: 'Accountable for product vision, technical delivery, production cost management, and client proposals. DLS pioneered a model of General Practice referenced in NHS England\'s Five Year Forward View.',
+      },
+      {
+        period: '2006 – 2015',
+        role: 'Head of Technology',
+        org: 'Digital Life Sciences / Illumina Digital',
+        desc: 'Nine years leading the technology function. Managed teams, supported business development, led solution architecture, and served as Head of Platform across two multi-year consortium programmes. Delivered work for Birmingham Children\'s Hospital (BBC and Guardian coverage), Evelina Children\'s Hospital, the BBC, and the NHS.',
+      },
+      {
+        period: '2006',
+        role: 'Head of Technical',
+        org: 'Exposure Promotions',
+        orgUrl: 'https://www.exposure.net/',
+        desc: 'Stabilised the interactive department. Introduced coding standards, sandboxed development, staging environments, and version control. Clients included Sony Computer Entertainment Europe, Red Bull, and Three.',
+      },
+      {
+        period: '2005 – 2006',
+        role: 'Lead PHP Developer',
+        org: 'Time Out Communications',
+        orgUrl: 'https://www.timeout.com/london/',
+        desc: 'Major overhaul of the Time Out London website, including data transfer from the internal print publishing database and the public search module.',
+      },
+      {
+        period: '2002 – 2005',
+        role: 'Contract Developer',
+        org: 'Various',
+        desc: 'Clients included Saatchi & Saatchi.',
+      },
+      {
+        period: '2000 – 2002',
+        role: 'Senior Developer',
+        org: 'RD2Media',
+        desc: '',
+      },
+      {
+        period: '1998 – 2000',
+        role: 'Developer',
+        org: 'Dennis Publishing / In Chair Viewing',
+        desc: '',
+      },
+    ].map(({ period, role, org, orgUrl, desc }) => (
+      <div class="border-t border-[#E4E4E0] py-6 grid grid-cols-[140px_1fr] gap-6">
+        <div class="font-[family-name:var(--font-sans)] text-sm text-[#71717A] pt-0.5 shrink-0">{period}</div>
+        <div>
+          <div class="font-[family-name:var(--font-sans)] font-500 text-[#1C1C1A]">{role}</div>
+          <div class="font-[family-name:var(--font-sans)] text-sm text-[#71717A] mb-2">
+            {orgUrl ? <a href={orgUrl} class="hover:text-[#1C1C1A] transition-colors no-underline">{org}</a> : org}
+          </div>
+          {desc && <p class="text-sm leading-relaxed text-[#1C1C1A]">{desc}</p>}
+        </div>
+      </div>
+    ))}
+
+    <div class="border-t border-[#E4E4E0] pt-10 mt-4">
+      <h2 class="font-[family-name:var(--font-sans)] text-xs font-500 uppercase tracking-widest text-[#71717A] mb-6">Education</h2>
+      <div class="space-y-3">
+        <div class="grid grid-cols-[140px_1fr] gap-6">
+          <span class="font-[family-name:var(--font-sans)] text-sm text-[#71717A]">2015</span>
+          <span class="font-[family-name:var(--font-sans)] text-sm text-[#1C1C1A]">Certified Scrum Master PSM I</span>
+        </div>
+        <div class="grid grid-cols-[140px_1fr] gap-6">
+          <span class="font-[family-name:var(--font-sans)] text-sm text-[#71717A]">1995 – 1998</span>
+          <span class="font-[family-name:var(--font-sans)] text-sm text-[#1C1C1A]">BSc Computing, University of North London</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</Base>
