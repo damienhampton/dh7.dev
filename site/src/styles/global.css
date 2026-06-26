@@ -42,3 +42,8 @@ body {
 .prose :where(code):not(:where(pre *))::after {
   content: none;
 }
+
+/* Shiki sets background via inline style, so !important is needed to override */
+.prose pre {
+  background-color: #F0EDE4 !important;
+}

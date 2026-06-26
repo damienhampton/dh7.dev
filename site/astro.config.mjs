@@ -5,6 +5,11 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://www.dh7.dev',
   integrations: [sitemap()],
+  markdown: {
+    shikiConfig: {
+      theme: 'github-light',
+    },
+  },
   vite: {
     plugins: [tailwindcss()],
   },
