@@ -4,7 +4,7 @@ slug: current-rms-opportunities-v2-1-api-changes
 publishedAt: 2026-06-20
 brief: "What changed in the Current RMS Opportunities v2.1 API, what's been restricted, and what that means if you're building integrations against it."
 tags: ["current-rms", "api", "integrations", "development"]
-draft: true
+draft: false
 ---
 
 Current RMS released v2.1 of the Opportunities API on 15 June 2026. The URL and query parameters are unchanged from V1, but the response shape is different and some associations are no longer available on the list endpoint.
@@ -21,7 +21,8 @@ To include associations, pass `include[]` as a query parameter — one value per
 GET /opportunities/12345?include[]=opportunity_items&include[]=participants
 ```
 
-Omitted associations are not returned. Requests that previously relied on associations being present by default will need updating.
+Omitted associations are not returned. **Requests that previously relied on associations being present by default 
+will need updating.**
 
 ### Opportunity list: `GET /opportunities`
 
@@ -29,7 +30,8 @@ V2.1 list responses include opportunity fields and charge totals for each record
 
 The difference from the single endpoint: `opportunity_items`, `item_assets`, `return_item_assets`, and `participants` are **not available on the list endpoint**. Passing these as `include[]` values on the list will not work.
 
-If you need line items, assets, or participants, you have to fetch the individual opportunity: `GET /opportunities/{id}`.
+**If you need line items, assets, or participants, you have to fetch the individual opportunity:** `GET /opportunities/
+{id}`.
 
 ## What this means for integrations
 
