@@ -1,11 +1,11 @@
 ---
 title: "The hidden cost of copying data between systems"
 slug: the-hidden-cost-of-copying-data-between-systems
-publishedAt: 2026-06-20
+publishedAt: 2026-07-11
 brief: "Manual data transfer looks cheap because the cost is distributed and invisible. That's precisely why it persists long after it should have been automated."
 tags: ["business", "integrations", "automation"]
 category: business
-draft: true
+draft: false
 ---
 
 Take one data entry task. Five minutes, twice a day, one member of staff. That's roughly 40 hours a year on a single task.
@@ -20,7 +20,7 @@ Every manual entry is an opportunity for an error. A digit wrong in a phone numb
 
 Each error has a tail. Someone has to find it. Work out what the correct value should be. Fix it in however many systems it has spread to. Manage the downstream consequences.
 
-A wrong delivery address is not an inconvenience. It is a failed delivery, an unhappy customer, and the cost of reattempting the job. [insert example — e.g. driver arriving at an old address because the CRM hadn't been updated before the job sheet was printed]
+A wrong delivery address is not an inconvenience. It is a failed delivery, an unhappy customer, and the cost of reattempting the job. Driver arrives at an address that hasn't been valid for eight months. The customer called to update it. Someone updated the CRM. Nobody updated the job management system. The job sheet printed from the old record.
 
 The cost of that single error is not five minutes of data entry. It is far more.
 
