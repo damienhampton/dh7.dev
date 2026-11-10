@@ -1,16 +1,20 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Contact — DH7" description="Get in touch with Damien Hampton about custom integrations or anything else.">
+<Base title="Contact — DH7" description="Get in touch with Damien Hampton.">
 
   <div class="max-w-lg">
     <h1 class="font-[family-name:var(--font-sans)] text-3xl font-600 tracking-tight text-[#2A2520] mb-4">✉️ Contact</h1>
+    <p class="leading-relaxed text-[#7A7068] mb-4">
+      A question about something I've written, a correction, or anything else — feel free to reach out.
+    </p>
     <p class="leading-relaxed text-[#7A7068] mb-10">
-      Whether it's a question about custom integrations, a specific system you're working with, or something you read — feel free to reach out.
+      For software development services, visit <a href="https://www.26brains.com" class="text-[#A87820] hover:underline">www.26brains.com</a>.
     </p>
 
     <form action="https://formspree.io/f/mdovyqog" method="POST" class="space-y-6">
-      <input type="hidden" name="_next" value="https://dh7.dev/thanks" />
+      <input type="hidden" name="_subject" value="dh7.dev message" />
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
       <div>
         <label for="name" class="font-[family-name:var(--font-sans)] text-sm font-500 text-[#2A2520] block mb-2">Name</label>
@@ -51,7 +55,39 @@ import Base from '../layouts/Base.astro';
       >
         Send message
       </button>
+      <p id="contact-error" class="font-[family-name:var(--font-sans)] text-sm text-[#B42318]" role="alert" hidden></p>
     </form>
   </div>
+
+  <script>
+    // Formspree's free plan ignores _next, so submit via fetch and redirect ourselves.
+    // Without JS the form still posts normally and lands on Formspree's own thanks page.
+    const form = document.querySelector<HTMLFormElement>('form[action*="formspree.io"]');
+    const error = document.getElementById('contact-error');
+    const button = form?.querySelector<HTMLButtonElement>('button[type="submit"]');
+
+    form?.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!button || !error) return;
+      error.hidden = true;
+      button.disabled = true;
+      button.textContent = 'Sending…';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' },
+        });
+        if (!response.ok) throw new Error(`Formspree responded ${response.status}`);
+        window.location.href = '/thanks';
+      } catch {
+        error.textContent = 'Sorry, the message could not be sent. Please try again in a moment.';
+        error.hidden = false;
+        button.disabled = false;
+        button.textContent = 'Send message';
+      }
+    });
+  </script>
 
 </Base>

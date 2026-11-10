@@ -8,7 +8,7 @@ interface Props {
 }
 const { title, description } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const ogDescription = description ?? 'Software engineer specialising in custom integrations between business systems — Current RMS, Pipedrive, Maxoptra, and more.';
+const ogDescription = description ?? 'Damien Hampton — software engineer and engineering leader. Writing on software development, integrations and engineering.';
 ---
 <!doctype html>
 <html lang="en" class="antialiased">
@@ -46,7 +46,6 @@ const ogDescription = description ?? 'Software engineer specialising in custom i
           <div class="hidden md:flex items-center gap-8">
             <a href="/about" class="font-[family-name:var(--font-sans)] text-base font-400 text-[#2A2520] hover:text-[#A87820] transition-colors no-underline">🧑‍💻 About</a>
             <a href="/blog" class="font-[family-name:var(--font-sans)] text-base font-400 text-[#2A2520] hover:text-[#A87820] transition-colors no-underline">📖 Writing</a>
-            <a href="/integrations" class="font-[family-name:var(--font-sans)] text-base font-400 text-[#2A2520] hover:text-[#A87820] transition-colors no-underline">🔌 Integrations</a>
             <a href="/contact" class="font-[family-name:var(--font-sans)] text-base font-400 text-[#2A2520] hover:text-[#A87820] transition-colors no-underline">✉️ Contact</a>
           </div>
           <!-- Hamburger button -->
@@ -62,7 +61,6 @@ const ogDescription = description ?? 'Software engineer specialising in custom i
         <div id="nav-menu" class="flex-col gap-4 pt-5 pb-2" style="display:none">
           <a href="/about" class="font-[family-name:var(--font-sans)] text-base font-400 text-[#2A2520] hover:text-[#A87820] transition-colors no-underline">🧑‍💻 About</a>
           <a href="/blog" class="font-[family-name:var(--font-sans)] text-base font-400 text-[#2A2520] hover:text-[#A87820] transition-colors no-underline">📖 Writing</a>
-          <a href="/integrations" class="font-[family-name:var(--font-sans)] text-base font-400 text-[#2A2520] hover:text-[#A87820] transition-colors no-underline">🔌 Integrations</a>
           <a href="/contact" class="font-[family-name:var(--font-sans)] text-base font-400 text-[#2A2520] hover:text-[#A87820] transition-colors no-underline">✉️ Contact</a>
         </div>
       </nav>
@@ -77,9 +75,13 @@ const ogDescription = description ?? 'Software engineer specialising in custom i
         <span class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068]">Damien Hampton</span>
         <div class="flex items-center gap-6">
           <a href="https://www.linkedin.com/in/damienhampton/" class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068] hover:text-[#2A2520] transition-colors no-underline">LinkedIn</a>
-          <a href="https://www.youtube.com/@26brains" class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068] hover:text-[#2A2520] transition-colors no-underline">YouTube</a>
           <a href="https://github.com/damienhampton/" class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068] hover:text-[#2A2520] transition-colors no-underline">GitHub</a>
         </div>
+      </div>
+      <div class="max-w-3xl mx-auto px-6 pb-8 -mt-2">
+        <p class="font-[family-name:var(--font-sans)] text-sm text-[#7A7068]">
+          For software development services, visit <a href="https://www.26brains.com" class="text-[#A87820] hover:underline">www.26brains.com</a>.
+        </p>
       </div>
     </footer>
 

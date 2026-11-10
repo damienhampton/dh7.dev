@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/integrations", "destination": "https://www.26brains.com/integrations", "permanent": true },
+    { "source": "/integrations/:path*", "destination": "https://www.26brains.com/integrations/:path*", "permanent": true }
+  ]
+}
